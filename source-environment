@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+# Sample
+#
+# kubectl vsphere login --server=SUPERVISOR_CLUSTER_CONTROL_PLANE_IP \
+# --tanzu-kubernetes-cluster-name TANZU_KUBERNETES_CLUSTER_NAME \
+# --tanzu-kubernetes-cluster-namespace TANZU_KUBERNETES_CLUSTER_NAMESPACE \
+# --vsphere-username VCENTER_SSO_USER_NAME
+#
+# kubectl vsphere login --server=172.18.31.1 \
+# --tanzu-kubernetes-cluster-name Cluster \
+# --tanzu-kubernetes-cluster-namespace hphil \
+# --vsphere-username administrator@vsphere.local
+#
+
+export SUPERVISOR_CLUSTER_CONTROL_PLANE_IP="172.18.31.1"
+export TANZU_KUBERNETES_CLUSTER_NAME="Cluster"
+export TANZU_KUBERNETES_CLUSTER_NAMESPACE="hphil"
+export VCENTER_SSO_USER_NAME="administrator@vsphere.local"
