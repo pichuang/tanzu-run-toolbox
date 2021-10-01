@@ -14,7 +14,9 @@
 # --vsphere-username administrator@vsphere.local
 #
 
+export VCENTER_IP="172.18.30.1"
 export SUPERVISOR_CLUSTER_CONTROL_PLANE_IP="172.18.31.1"
 export TANZU_KUBERNETES_CLUSTER_NAMESPACE="hphil"
 export TANZU_KUBERNETES_CLUSTER_NAME="tkgs-kubeapps-cluster"
 export VCENTER_SSO_USER_NAME="administrator@vsphere.local"
+
