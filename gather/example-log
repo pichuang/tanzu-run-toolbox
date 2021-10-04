@@ -1,0 +1,28 @@
+NAME                                                   STATUS     ROLES                  AGE     VERSION            INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                 KERNEL-VERSION       CONTAINER-RUNTIME
+tkgs-gpu-node                                          NotReady   <none>                 2d15h   v1.20.9            172.18.31.52   <none>        Ubuntu 20.04.3 LTS       5.4.0-88-generic     containerd://1.4.10
+tkgs-kubeapps-cluster-control-plane-fdtt7              Ready      control-plane,master   3d16h   v1.20.9+vmware.1   172.18.31.36   <none>        VMware Photon OS/Linux   4.19.191-4.ph3-esx   containerd://1.4.6
+tkgs-kubeapps-cluster-workers-g4n7w-85bc56d446-fpc4t   Ready      <none>                 3d16h   v1.20.9+vmware.1   172.18.31.38   <none>        VMware Photon OS/Linux   4.19.191-4.ph3-esx   containerd://1.4.6
+tkgs-kubeapps-cluster-workers-g4n7w-85bc56d446-jp9c6   Ready      <none>                 3d16h   v1.20.9+vmware.1   172.18.31.37   <none>        VMware Photon OS/Linux   4.19.191-4.ph3-esx   containerd://1.4.6
+
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2+vmware.2", GitCommit:"098524fa6b545cf2ec2290259f34d59005dee622", GitTreeState:"clean", BuildDate:"2021-04-28T20:17:41Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.9+vmware.1", GitCommit:"7131318a3deb1893fcf6493d8f6ed25c8f5c2ecb", GitTreeState:"clean", BuildDate:"2021-07-25T19:11:13Z", GoVersion:"go1.15.14", Compiler:"gc", Platform:"linux/amd64"}
+
+NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system                    antrea-controller              1/1     1            1           3d16h
+kube-system                    antrea-resource-init           1/1     1            1           3d16h
+kube-system                    coredns                        2/2     2            2           3d16h
+kube-system                    metrics-server                 1/1     1            1           3d16h
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           3d16h
+vmware-system-csi              vsphere-csi-controller         1/1     1            1           3d16h
+
+NAMESPACE           NAME                     TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
+default             kubernetes               ClusterIP   10.96.0.1        <none>        443/TCP                  3d16h
+default             supervisor               ClusterIP   None             <none>        6443/TCP                 3d16h
+kube-system         antrea                   ClusterIP   10.111.200.139   <none>        443/TCP                  3d16h
+kube-system         kube-dns                 ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP   3d16h
+kube-system         metrics-server           ClusterIP   10.108.187.245   <none>        443/TCP                  3d16h
+vmware-system-csi   vsphere-csi-controller   ClusterIP   10.100.103.218   <none>        2112/TCP,2113/TCP        3d16h
+
+NAMESPACE                      NAME                                                                   READY   STATUS                  RESTARTS   AGE
+kube-system                    antrea-agent-5q5bm                                                     0/2     Init:ImagePullBackOff   0          2d14h
+vmware-system-csi              vsphere-csi-node-fpjp8                                                 0/3     ContainerCreating       0          2d15h
