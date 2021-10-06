@@ -14,7 +14,7 @@
 4. 點選 `Clusters`
 5. 點選 `EXPORT LOGS`
 
-![](/images/export-logs.jpeg)
+![](export-logs.jpeg)
 
 ## 提供給窗口
 
