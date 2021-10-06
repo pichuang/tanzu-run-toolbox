@@ -21,3 +21,7 @@
 ## 提供給窗口
 
 因 `wcp-support-bundle-domain-yyyymmdd--hh-mm.tar` 檔案很大，可採用 Google Drive / One Drive / Dropbox 放置於內，提供給代理商或原廠窗口進行偵測
+
+## 如何進行除錯?
+
+請參考 [README-CHECK.md](README-CHECK.md) 一文
