@@ -8,7 +8,7 @@
 
 ## 收集 Tanzu Log
 
-請順序點選
+請依序點選
 1. 登入 vCenter
 2. 點選 `Menu`
 3. 點選 `Workload Management`
@@ -17,6 +17,18 @@
 6. 獲得 `wcp-support-bundle-domain-yyyymmdd--hh-mm.tar` 
 
 ![](export-logs.jpeg)
+
+## (Optioanl) 收集 NSX-T Log
+
+依據 [VMware NSX-T Data Center - Collect Support Bundles](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-73D9AF0D-4000-4EF2-AC66-6572AD1A0B30.html) 所述
+
+請依序點選
+1. 登入 NSX Manager
+2. 點選 `System`
+3. 點選 `Support Bundle`
+4. 選擇節點
+5. 點選 `Start Bundle Collection`
+6. 點選 `Download`
 
 ## 提供給窗口
 
