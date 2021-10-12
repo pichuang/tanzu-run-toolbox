@@ -43,8 +43,17 @@ drwxr-xr-x  16 pichuang  staff         512 Oct  7 02:09 vc-pichuang.local-2021-1
 
 建議使用 `VSCode` 將 `vcenter-domain-yyyy-mm-dd--hh-mm*` 匯入進去
 
-
-
-
+## Appendix: 常見 Log Files 位置
+- vCenter Server Update
+  - `/var/log/vmware/applmgmt/software-packages.log`
+- Supervisor Cluster upgrade
+  - vCenter: `/var/log/vmware/wcp/wcpsvc.log`
+  - Control Plane: `/var/log/vmware/upgrade-ctl-cli.log`
+  - Cnotrol Plane: `/var/log/vmware/upgrade-ctl-compupgrade.log`
+- ESXi Spherelet Update
+  - `/var/log/spherelet.log`
+- Tanzu Kubenretes Cluster
+  - `/var/log/cloud-init-output.log`
+  - `/var/log/pods`
 
 
