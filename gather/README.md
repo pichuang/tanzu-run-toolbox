@@ -30,6 +30,12 @@
 5. 點選 `Start Bundle Collection`
 6. 點選 `Download`
 
+## (Optional) 收集特定 Tanzu Kubernetes Cluster Bundle
+
+依據 [How to collect a diagnostic log bundle from a Tanzu Kubernetes Guest Cluster on vSphere with Tanzu (80949)](https://kb.vmware.com/s/article/80949) 所述
+
+執行範例: `./tkc-support-bundler create –k /tmp/kubeconfig –o /tmp/ -c tkg-cluster-01 –n namespace01`
+
 ## 3. 提供給窗口
 
 因 `wcp-support-bundle-domain-yyyymmdd--hh-mm.tar` 檔案很大，可採用 Google Drive / One Drive / Dropbox 放置於內，提供給代理商或原廠窗口進行偵測
