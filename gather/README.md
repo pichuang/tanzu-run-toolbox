@@ -3,10 +3,12 @@
 ## 1. 紀錄問題
 
 1. 務必提供狀況描述
-2. 紀錄疑似有問題的截圖、文字說明
-3. 提供 YAML 檔案
+2. 紀錄疑似有問題的截圖（vCenter 畫面、kubectl CLI 畫面），並文字說明
+3. 提供 YAML 檔案（Cluster create yaml）
 
 ## 2. 收集 Tanzu Log
+依據 [VMware vSphere - Collect the Support Bundle for Workload Management
+](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-CC9A47FF-E623-4C73-A28E-ACEE88EF4BBD.html)
 
 請依序點選
 1. 登入 vCenter
@@ -17,6 +19,9 @@
 6. 獲得 `wcp-support-bundle-domain-yyyymmdd--hh-mm.tar` 
 
 ![](export-logs.jpeg)
+
+e.g. 
+(Supervisor Cluster 
 
 ## (Optioanl) 收集 NSX-T Log
 
