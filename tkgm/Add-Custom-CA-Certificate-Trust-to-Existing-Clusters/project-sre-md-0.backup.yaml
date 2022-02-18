@@ -1,0 +1,40 @@
+apiVersion: bootstrap.cluster.x-k8s.io/v1alpha3
+kind: KubeadmConfigTemplate
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"bootstrap.cluster.x-k8s.io/v1alpha3","kind":"KubeadmConfigTemplate","metadata":{"annotations":{},"name":"project-sre-md-0","namespace":"default"},"spec":{"template":{"spec":{"files":[],"joinConfiguration":{"nodeRegistration":{"criSocket":"/var/run/containerd/containerd.sock","kubeletExtraArgs":{"cloud-provider":"external","tls-cipher-suites":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"},"name":"{{ ds.meta_data.hostname }}"}},"preKubeadmCommands":["hostname \"{{ ds.meta_data.hostname }}\"","echo \"::1         ipv6-localhost ipv6-loopback\" \u003e/etc/hosts","echo \"127.0.0.1   localhost\" \u003e\u003e/etc/hosts","echo \"127.0.0.1   {{ ds.meta_data.hostname }}\" \u003e\u003e/etc/hosts","echo \"{{ ds.meta_data.hostname }}\" \u003e/etc/hostname"],"useExperimentalRetryJoin":true,"users":[{"name":"capv","sshAuthorizedKeys":["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyOD8F9cDLWaZ5vNIg3gebMwujduJaOLatWEnD4SyDWudyo5Baw9rLBLWe1CTyrZGIIqxww4MACgaReOmx+VInS8qVpNFshVsJlUqhEQ7Mbf+Hy5V1PFfD7ViSgH7gUwazFIdW8cNRqP4BR3IHs5NEIlLj76mnV29Mc1PUDDcuOUgmtvXLLY7hBLxqZv7gVuyXhOZIFQ4n33Ta5woa1D9474R9Lkza03fiLtnb93+cPmH3BunuhDHZ9IrebIO27ewPZPuU8GEZTQcawKBHFz/tygwFw8QS6XjpAmXMsUBPnVZnNzfYmYZO0FslY0hnlqxevn8kq99bfAYBm8uEJI/XvIvIewNdL2Eolpbpq5uWTZyGisiX6IAm69cNPwFqDrR1j8HLDk8ogOg4JwkYys4n8FWQAyBmc8NsGED0y28Ivdj6IZFsZw64IOiFZY+A24/hnsHZuQiGEXQLSQQTIqv6SxQp+6yTV5q6s26MA7DLGRxherlUPbgqeYGEQWetFrcxHGWCu6JQWMBNiNoQp+5bZy7TY3dXDXaID0IifTuDZw8lSqwemJvWoD9cHJktQuv2jRTIe1n6qp+Hy4r5WfXhgJrv4b/YRRs3wDnW0b3a6LIts9U/iEX/7oBTl9uXIaHH3FY67V64gIfUEh8TN2H+NgTs6L9qBcSaGsfZLmTHXw=="],"sudo":"ALL=(ALL) NOPASSWD:ALL"}]}}}}
+  creationTimestamp: "2022-02-17T13:58:35Z"
+  generation: 1
+  name: project-sre-md-0
+  namespace: default
+  ownerReferences:
+  - apiVersion: cluster.x-k8s.io/v1alpha3
+    kind: Cluster
+    name: project-sre
+    uid: f36c9c4b-d0c5-4dd5-a8a3-d9c27097eab6
+  resourceVersion: "34269"
+  uid: 5e6396ba-75e7-4e54-a7e1-cdbda96ede07
+spec:
+  template:
+    spec:
+      files: []
+      joinConfiguration:
+        nodeRegistration:
+          criSocket: /var/run/containerd/containerd.sock
+          kubeletExtraArgs:
+            cloud-provider: external
+            tls-cipher-suites: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+          name: '{{ ds.meta_data.hostname }}'
+      preKubeadmCommands:
+      - hostname "{{ ds.meta_data.hostname }}"
+      - echo "::1         ipv6-localhost ipv6-loopback" >/etc/hosts
+      - echo "127.0.0.1   localhost" >>/etc/hosts
+      - echo "127.0.0.1   {{ ds.meta_data.hostname }}" >>/etc/hosts
+      - echo "{{ ds.meta_data.hostname }}" >/etc/hostname
+      useExperimentalRetryJoin: true
+      users:
+      - name: capv
+        sshAuthorizedKeys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyOD8F9cDLWaZ5vNIg3gebMwujduJaOLatWEnD4SyDWudyo5Baw9rLBLWe1CTyrZGIIqxww4MACgaReOmx+VInS8qVpNFshVsJlUqhEQ7Mbf+Hy5V1PFfD7ViSgH7gUwazFIdW8cNRqP4BR3IHs5NEIlLj76mnV29Mc1PUDDcuOUgmtvXLLY7hBLxqZv7gVuyXhOZIFQ4n33Ta5woa1D9474R9Lkza03fiLtnb93+cPmH3BunuhDHZ9IrebIO27ewPZPuU8GEZTQcawKBHFz/tygwFw8QS6XjpAmXMsUBPnVZnNzfYmYZO0FslY0hnlqxevn8kq99bfAYBm8uEJI/XvIvIewNdL2Eolpbpq5uWTZyGisiX6IAm69cNPwFqDrR1j8HLDk8ogOg4JwkYys4n8FWQAyBmc8NsGED0y28Ivdj6IZFsZw64IOiFZY+A24/hnsHZuQiGEXQLSQQTIqv6SxQp+6yTV5q6s26MA7DLGRxherlUPbgqeYGEQWetFrcxHGWCu6JQWMBNiNoQp+5bZy7TY3dXDXaID0IifTuDZw8lSqwemJvWoD9cHJktQuv2jRTIe1n6qp+Hy4r5WfXhgJrv4b/YRRs3wDnW0b3a6LIts9U/iEX/7oBTl9uXIaHH3FY67V64gIfUEh8TN2H+NgTs6L9qBcSaGsfZLmTHXw==
+        sudo: ALL=(ALL) NOPASSWD:ALL

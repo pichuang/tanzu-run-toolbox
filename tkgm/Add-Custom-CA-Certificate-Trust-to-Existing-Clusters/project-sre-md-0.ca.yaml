@@ -1,0 +1,111 @@
+apiVersion: bootstrap.cluster.x-k8s.io/v1alpha3
+kind: KubeadmConfigTemplate
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"bootstrap.cluster.x-k8s.io/v1alpha3","kind":"KubeadmConfigTemplate","metadata":{"annotations":{},"name":"project-sre-md-0","namespace":"default"},"spec":{"template":{"spec":{"files":[],"joinConfiguration":{"nodeRegistration":{"criSocket":"/var/run/containerd/containerd.sock","kubeletExtraArgs":{"cloud-provider":"external","tls-cipher-suites":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"},"name":"{{ ds.meta_data.hostname }}"}},"preKubeadmCommands":["hostname \"{{ ds.meta_data.hostname }}\"","echo \"::1         ipv6-localhost ipv6-loopback\" \u003e/etc/hosts","echo \"127.0.0.1   localhost\" \u003e\u003e/etc/hosts","echo \"127.0.0.1   {{ ds.meta_data.hostname }}\" \u003e\u003e/etc/hosts","echo \"{{ ds.meta_data.hostname }}\" \u003e/etc/hostname"],"useExperimentalRetryJoin":true,"users":[{"name":"capv","sshAuthorizedKeys":["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyOD8F9cDLWaZ5vNIg3gebMwujduJaOLatWEnD4SyDWudyo5Baw9rLBLWe1CTyrZGIIqxww4MACgaReOmx+VInS8qVpNFshVsJlUqhEQ7Mbf+Hy5V1PFfD7ViSgH7gUwazFIdW8cNRqP4BR3IHs5NEIlLj76mnV29Mc1PUDDcuOUgmtvXLLY7hBLxqZv7gVuyXhOZIFQ4n33Ta5woa1D9474R9Lkza03fiLtnb93+cPmH3BunuhDHZ9IrebIO27ewPZPuU8GEZTQcawKBHFz/tygwFw8QS6XjpAmXMsUBPnVZnNzfYmYZO0FslY0hnlqxevn8kq99bfAYBm8uEJI/XvIvIewNdL2Eolpbpq5uWTZyGisiX6IAm69cNPwFqDrR1j8HLDk8ogOg4JwkYys4n8FWQAyBmc8NsGED0y28Ivdj6IZFsZw64IOiFZY+A24/hnsHZuQiGEXQLSQQTIqv6SxQp+6yTV5q6s26MA7DLGRxherlUPbgqeYGEQWetFrcxHGWCu6JQWMBNiNoQp+5bZy7TY3dXDXaID0IifTuDZw8lSqwemJvWoD9cHJktQuv2jRTIe1n6qp+Hy4r5WfXhgJrv4b/YRRs3wDnW0b3a6LIts9U/iEX/7oBTl9uXIaHH3FY67V64gIfUEh8TN2H+NgTs6L9qBcSaGsfZLmTHXw=="],"sudo":"ALL=(ALL) NOPASSWD:ALL"}]}}}}
+  creationTimestamp: "2022-02-17T13:58:35Z"
+  generation: 1
+  name: project-sre-md-0
+  namespace: default
+  ownerReferences:
+  - apiVersion: cluster.x-k8s.io/v1alpha3
+    kind: Cluster
+    name: project-sre
+    uid: f36c9c4b-d0c5-4dd5-a8a3-d9c27097eab6
+  resourceVersion: "34269"
+  uid: 5e6396ba-75e7-4e54-a7e1-cdbda96ede07
+spec:
+  template:
+    spec:
+      files:
+      - content: |
+            -----BEGIN CERTIFICATE-----
+            MIIFWDCCBECgAwIBAgIRAM091cnp8Sw3U1B7kw/BZZ4wDQYJKoZIhvcNAQELBQAw
+            gboxCzAJBgNVBAYTAlRXMQ8wDQYDVQQIDAZUYWlwZWkxFDASBgNVBAcMC1RhaXBl
+            aSBDaXR5MRcwFQYDVQQKDA5Ib21lQ2xvdWQgQ29ycDEmMCQGA1UECwwdSG9tZUNs
+            b3VkIE9yZ2FuaXphdGlvbmFsIFVuaXQxHzAdBgNVBAMMFkhvbWVDbG91ZCAyMDIy
+            IFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3Jvb3RAcGljaHVhbmcubG9jYWwwHhcN
+            MjIwMjE4MDUwNjM3WhcNMjMwMzE1MDUwNjM3WjCBsjELMAkGA1UEBhMCVFcxDzAN
+            BgNVBAgMBlRhaXBlaTEUMBIGA1UEBwwLVGFpcGVpIENpdHkxFzAVBgNVBAoMDkhv
+            bWVDbG91ZCBDb3JwMSYwJAYDVQQLDB1Ib21lQ2xvdWQgT3JnYW5pemF0aW9uYWwg
+            VW5pdDEXMBUGA1UEAwwOKi52bXdhcmUubG9jYWwxIjAgBgkqhkiG9w0BCQEWE3Jv
+            b3RAcGljaHVhbmcubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+            AQDMnIzA63ZVu6hH8+FAOotEDYUlEvIu5bgUbsCZjfwnwOloHdHpEjxWgtm2rCQ7
+            ELa5Byi/DgD+pP79PSewVfaumYPSljnQQZxlwqedSzBp2wIOyavbqTpANbLIPeXq
+            yHGR+e4jrKBoMigBXI+/0zWwT6JWacK9QESKuIWaPApN9jT9S9BORMPcwEYntU8m
+            YvhDI7W7AV5qWESzgA603dyIdvE2l/xJ9VdopCyYIBKLnDUMtWvdI6J4qiEidNQz
+            62Mh6u1xXYT3XQz8RHeCnAi7gTf7FWTPMhBE2TF3cZ4Ip2eG8DrwzOtpi8MI0uwY
+            uvH06/c/sxaQTUXM5tNN3+yfAgMBAAGjggFdMIIBWTAJBgNVHRMEAjAAMB0GA1Ud
+            DgQWBBTUDjX9Wspal7pasVRex0MknD1WBjCB7wYDVR0jBIHnMIHkgBSX4mvfWCm7
+            fVgMEmNgip+UP7Hhg6GBwKSBvTCBujELMAkGA1UEBhMCVFcxDzANBgNVBAgMBlRh
+            aXBlaTEUMBIGA1UEBwwLVGFpcGVpIENpdHkxFzAVBgNVBAoMDkhvbWVDbG91ZCBD
+            b3JwMSYwJAYDVQQLDB1Ib21lQ2xvdWQgT3JnYW5pemF0aW9uYWwgVW5pdDEfMB0G
+            A1UEAwwWSG9tZUNsb3VkIDIwMjIgUm9vdCBDQTEiMCAGCSqGSIb3DQEJARYTcm9v
+            dEBwaWNodWFuZy5sb2NhbIIJAPlOP08Hou34MBMGA1UdJQQMMAoGCCsGAQUFBwMB
+            MAsGA1UdDwQEAwIFoDAZBgNVHREEEjAQgg4qLnZtd2FyZS5sb2NhbDANBgkqhkiG
+            9w0BAQsFAAOCAQEAITsr7TwvAKFSxD9pZfyBOVYW402NAnBX15XDGm4STAoNKGPH
+            xiUxYza1hmYkMrSZV9/qvatFY5kPSSDGEqGYxsUNtJ4Aj9bCEKYIDQeQNGutc8Vv
+            jEyVq83nJnLe9EHQPbGH2aZ2oIX4eksG3nSRnHerxNLM8cTccXM/eJELS9++0b1y
+            BTm6WUVuVb74wb5OKEGxFUd1xQyCn69loybdM+BzGcDXJcHXJg0gbLpHJ7tgM+Wm
+            5INOCTy0B6/LotqWIQVLxdpck/R52nGIEuq9bSst8MUEptMz7XOuE7ZSArkNzwCB
+            XcH4wDMoyQYBGwQ8G7c63IZg0P4aRZVV5RnrJg==
+            -----END CERTIFICATE-----
+        owner: root:root
+        path: /usr/local/share/ca-certificates/test-vmware.local.crt
+        permissions: "0644"
+      - content: |
+            -----BEGIN CERTIFICATE-----
+            MIIFKzCCBBOgAwIBAgIJAPlOP08Hou34MA0GCSqGSIb3DQEBCwUAMIG6MQswCQYD
+            VQQGEwJUVzEPMA0GA1UECAwGVGFpcGVpMRQwEgYDVQQHDAtUYWlwZWkgQ2l0eTEX
+            MBUGA1UECgwOSG9tZUNsb3VkIENvcnAxJjAkBgNVBAsMHUhvbWVDbG91ZCBPcmdh
+            bml6YXRpb25hbCBVbml0MR8wHQYDVQQDDBZIb21lQ2xvdWQgMjAyMiBSb290IENB
+            MSIwIAYJKoZIhvcNAQkBFhNyb290QHBpY2h1YW5nLmxvY2FsMB4XDTIyMDIxODA1
+            MDUxMVoXDTMyMDIxNjA1MDUxMVowgboxCzAJBgNVBAYTAlRXMQ8wDQYDVQQIDAZU
+            YWlwZWkxFDASBgNVBAcMC1RhaXBlaSBDaXR5MRcwFQYDVQQKDA5Ib21lQ2xvdWQg
+            Q29ycDEmMCQGA1UECwwdSG9tZUNsb3VkIE9yZ2FuaXphdGlvbmFsIFVuaXQxHzAd
+            BgNVBAMMFkhvbWVDbG91ZCAyMDIyIFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3Jv
+            b3RAcGljaHVhbmcubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+            AQCjLAS9pCl9fbek/n4L0f7bpK5mhQrxzEYaCFuBefzuMFxt+WdkoNxEPluYiIYY
+            q6/CHc5o/kkT8UmTz+sQEvFoGXVPN7SiJOIGVsPK957+uI4GUnZeB93/LZDLS7nz
+            CcO4rYOZWc+1UIKxSQ/Qu2yDJA1HOWzfi09fnCmAp1g0fXU/9ZLMYROcAs2CzfJU
+            7sIrxtsxnpxTjDt7NQwzV/fuuBLQy4bfohfS7eiKiRSKcCmCQdQfajN6pDPsl25H
+            ZfMqpB8y++koDr4AO26FgZ8Eh52CpkKAl/uT7vIYAeihdDpDD6qJ9TAIouAkXz+U
+            iGNaHvMM4q0jsTfm2ztU5j5fAgMBAAGjggEwMIIBLDAdBgNVHQ4EFgQUl+Jr31gp
+            u31YDBJjYIqflD+x4YMwge8GA1UdIwSB5zCB5IAUl+Jr31gpu31YDBJjYIqflD+x
+            4YOhgcCkgb0wgboxCzAJBgNVBAYTAlRXMQ8wDQYDVQQIDAZUYWlwZWkxFDASBgNV
+            BAcMC1RhaXBlaSBDaXR5MRcwFQYDVQQKDA5Ib21lQ2xvdWQgQ29ycDEmMCQGA1UE
+            CwwdSG9tZUNsb3VkIE9yZ2FuaXphdGlvbmFsIFVuaXQxHzAdBgNVBAMMFkhvbWVD
+            bG91ZCAyMDIyIFJvb3QgQ0ExIjAgBgkqhkiG9w0BCQEWE3Jvb3RAcGljaHVhbmcu
+            bG9jYWyCCQD5Tj9PB6Lt+DAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkq
+            hkiG9w0BAQsFAAOCAQEALwXHJDbUUasQyi93iJe8vMQgrMHU5bc91z4enUzNcha7
+            cFDottlyQ8wSgX6KVBv9YzrgjETDnO3Geats9deC7yym+kMvXsiHIvAOeeNBRLJr
+            4eOWL+op648Rd4eLLSLR+WCGTvrlS0nyrH7P7dYuQtfRhypR7GNDGndq7RDzXGc1
+            xWRLwOVT0nDOvrabeu0oH24VQvD7VsGfkF1XYOxmOLv6h0sK4egCgRsrzhgo8+h2
+            3f8o1PqkLNaiMfpfbYIQM3K7Mx4b8snrdUy70rZbhyCKhGO1/qLQqfa+l9aD+aaT
+            oo9EScKW7X3hvymcsBoNm5Ly3TKw8Mu/I/XRkEO2fg==
+            -----END CERTIFICATE-----
+        owner: root:root
+        path: /usr/local/share/ca-certificates/homecloud-ca.crt
+        permissions: "0644"
+      joinConfiguration:
+        nodeRegistration:
+          criSocket: /var/run/containerd/containerd.sock
+          kubeletExtraArgs:
+            cloud-provider: external
+            tls-cipher-suites: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+          name: '{{ ds.meta_data.hostname }}'
+      preKubeadmCommands:
+      - hostname "{{ ds.meta_data.hostname }}"
+      - echo "::1         ipv6-localhost ipv6-loopback" >/etc/hosts
+      - echo "127.0.0.1   localhost" >>/etc/hosts
+      - echo "127.0.0.1   {{ ds.meta_data.hostname }}" >>/etc/hosts
+      - echo "{{ ds.meta_data.hostname }}" >/etc/hostname
+      - '! which update-ca-certificates 2>/dev/null || update-ca-certificates'
+
+      useExperimentalRetryJoin: true
+      users:
+      - name: capv
+        sshAuthorizedKeys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyOD8F9cDLWaZ5vNIg3gebMwujduJaOLatWEnD4SyDWudyo5Baw9rLBLWe1CTyrZGIIqxww4MACgaReOmx+VInS8qVpNFshVsJlUqhEQ7Mbf+Hy5V1PFfD7ViSgH7gUwazFIdW8cNRqP4BR3IHs5NEIlLj76mnV29Mc1PUDDcuOUgmtvXLLY7hBLxqZv7gVuyXhOZIFQ4n33Ta5woa1D9474R9Lkza03fiLtnb93+cPmH3BunuhDHZ9IrebIO27ewPZPuU8GEZTQcawKBHFz/tygwFw8QS6XjpAmXMsUBPnVZnNzfYmYZO0FslY0hnlqxevn8kq99bfAYBm8uEJI/XvIvIewNdL2Eolpbpq5uWTZyGisiX6IAm69cNPwFqDrR1j8HLDk8ogOg4JwkYys4n8FWQAyBmc8NsGED0y28Ivdj6IZFsZw64IOiFZY+A24/hnsHZuQiGEXQLSQQTIqv6SxQp+6yTV5q6s26MA7DLGRxherlUPbgqeYGEQWetFrcxHGWCu6JQWMBNiNoQp+5bZy7TY3dXDXaID0IifTuDZw8lSqwemJvWoD9cHJktQuv2jRTIe1n6qp+Hy4r5WfXhgJrv4b/YRRs3wDnW0b3a6LIts9U/iEX/7oBTl9uXIaHH3FY67V64gIfUEh8TN2H+NgTs6L9qBcSaGsfZLmTHXw==
+        sudo: ALL=(ALL) NOPASSWD:ALL
