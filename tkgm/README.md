@@ -170,4 +170,15 @@ kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.j
 curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
 ```
 
-Q7: 
+Q7: stream error: stream ID 127; INTERNAL_ERROR; received from peer
+
+```
+tanzu package available list cert-manager.tanzu.vmware.com -A
+```
+
+```bash
+- Retrieving package versions for cert-manager.tanzu.vmware.com... Error: Get "https://192.168.67.206:6443/apis/data.packaging.carvel.dev/v1alpha1/packages?fieldSelector=spec.refName%3Dcert-manager.tanzu.vmware.com": stream error: stream ID 127; INTERNAL_ERROR; received from peer
+Error: exit status 1
+
+_  exit status 1
+```
