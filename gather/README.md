@@ -41,9 +41,10 @@ e.g.
 
 請依序點選
 1. 登入 ALB
-2. 點選 `System`
-3. 點選 `Tech Support`
-4. 點選 `General Tech Support`
+2. 點選 `Administrator`
+3. 點選 `System`
+4. 點選 `Tech Support`
+5. 點選 `General Tech Support`
 6. 點選 Type: `Debug Logs`
 7. 點選 Generate
 
