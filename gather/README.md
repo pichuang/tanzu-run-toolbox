@@ -35,11 +35,25 @@ e.g.
 5. 點選 `Start Bundle Collection`
 6. 點選 `Download`
 
+## (Optional) 收集 AVI Networks Log
+
+依據 [Collecting Tech Support Logs in Avi Vantage](https://avinetworks.com/docs/20.1/collecting-tech-support-logs/) 所述
+
+請依序點選
+1. 登入 ALB
+2. 點選 `System`
+3. 點選 `Tech Support`
+4. 點選 `General Tech Support`
+6. 點選 Type: `Debug Logs`
+7. 點選 Generate
+
+![](https://avinetworks.com/docs/20.1/collecting-tech-support-logs/img/navigating-to-tech-support.png)
+
 ## (Optional) 收集特定 Tanzu Kubernetes Cluster Bundle
 
 依據 [How to collect a diagnostic log bundle from a Tanzu Kubernetes Guest Cluster on vSphere with Tanzu (80949)](https://kb.vmware.com/s/article/80949) 所述
 
-執行範例: `./tkc-support-bundler create –k /tmp/kubeconfig –o /tmp/ -c tkg-cluster-01 –n namespace01`
+執行範例: `./tkc-support-bundler create –k /tmp/kubeconfig –o /tmp/ -c tkg-cluster-01 –n namespace01` 
 
 ## 3. 提供給窗口
 
